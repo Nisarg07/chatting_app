@@ -94,11 +94,6 @@ class _HomeState extends State<Home> {
                           borderRadius:
                               BorderRadius.all(Radius.circular(30.0))),
                       onPressed: () async {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SignUp(),
-                            ));
                         var result = await AuthService()
                             .signInWithPhone(_phone, context);
                         if (_phone == null || result == "error") {
