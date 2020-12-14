@@ -1,4 +1,5 @@
 import 'package:chatting_app/Utils/utils.dart';
+import 'package:chatting_app/screens/chatScreen.dart';
 import 'package:chatting_app/screens/signUp.dart';
 import 'package:chatting_app/service/loginService.dart';
 import 'package:flutter/material.dart';
@@ -94,6 +95,11 @@ class _HomeState extends State<Home> {
                           borderRadius:
                               BorderRadius.all(Radius.circular(30.0))),
                       onPressed: () async {
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //       builder: (context) => ChatScreen(),
+                        //     ));
                         var result = await AuthService()
                             .signInWithPhone(_phone, context);
                         if (_phone == null || result == "error") {
